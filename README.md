@@ -7,7 +7,7 @@
 **Verifiable data. Compaction-aware RL. Trustworthy evaluation.**
 
 [![arXiv](https://img.shields.io/badge/arXiv-coming_soon-B31B1B?style=flat-square)][paper]
-[![Models](https://img.shields.io/badge/%F0%9F%A4%97_Models-SFT_4B_%26_9B-FFD21E?style=flat-square)][models]
+[![Models](https://img.shields.io/badge/%F0%9F%A4%97_Models-SFT_%2B_RL_4B_%26_9B-FFD21E?style=flat-square)][models]
 [![Datasets](https://img.shields.io/badge/%F0%9F%A4%97_Datasets-SFT_%26_RL-FFD21E?style=flat-square)][datasets]
 
 [Overview](#overview) · [Results](#results) · [Method](#method) · [Resources](#resources) · [Repository](#repository) · [Citation](#citation)
@@ -16,7 +16,7 @@
 
 Official repository for **Glasseek**, a framework for building deep search agents through verifiable data construction, reinforcement learning with context management, and evaluation with anti-leakage safeguards. Our **Glasseeker-4B** and **Glasseeker-9B** models are built on Qwen3.5-4B and Qwen3.5-9B.
 
-> **Release status:** Our [4B and 9B SFT checkpoints and model card][models] are now available via anonymous access. Our [training datasets and dataset card][datasets] provide **5,762 SFT trajectories covering 4,448 unique questions** and **1,308 RL questions with reference answers**. The data construction pipeline, evaluation runner, and Hermes backend are available in [`Data_curation/`](Data_curation/), [`Evaluation/`](Evaluation/), and [`Evaluation_backend/`](Evaluation_backend/). Training code and RL checkpoints are being prepared for release.
+> **Release status:** Our [4B and 9B SFT and RL checkpoints and model card][models] are available via anonymous access. Our [training datasets and dataset card][datasets] provide **5,762 SFT trajectories covering 4,448 unique questions** and **1,308 RL questions with reference answers**. The data construction pipeline, evaluation runner, and Hermes backend are available in [`Data_curation/`](Data_curation/), [`Evaluation/`](Evaluation/), and [`Evaluation_backend/`](Evaluation_backend/). Training code is being prepared for release.
 
 ## Overview
 
@@ -44,7 +44,7 @@ Performance (%) reported in **Table 2 of the current manuscript**. Higher is bet
 
 The six benchmarks cover English and Chinese web search, text-based agent tasks, reasoning with noisy evidence, and live browsing. **GAIA-Text** is the 103-question text-only subset; **XDS-2510** denotes the 2510 version of xbench-DeepSearch.
 
-Results describe the RL-trained research models in the manuscript. The [released SFT checkpoints and model card][models] provide the SFT-stage results and usage instructions; RL checkpoints and training recipes are forthcoming.
+Results describe the RL-trained research models in the manuscript. The [model card][models] provides SFT-stage results and usage instructions; SFT and RL checkpoints are available via anonymous access, with training recipes forthcoming.
 
 <details>
 <summary><strong>Training ablation: from SFT to CM-GSPO</strong></summary>
@@ -112,8 +112,8 @@ Available resources are linked below; additional links will be added as each art
 | Paper | Glasseek: A Transparent Recipe for Training and Trustworthy Evaluation of Deep Search Agents | arXiv: coming soon |
 | Glasseek-4B-SFT | SFT checkpoint based on Qwen3.5-4B; folder `SFT-4B/` | [Anonymous access][models] |
 | Glasseek-9B-SFT | SFT checkpoint based on Qwen3.5-9B; folder `SFT-9B/` | [Anonymous access][models] |
-| Glasseeker-4B | RL-trained research model based on Qwen3.5-4B | Hugging Face: coming soon |
-| Glasseeker-9B | RL-trained research model based on Qwen3.5-9B | Hugging Face: coming soon |
+| Glasseeker-4B | RL-trained research model based on Qwen3.5-4B; folder `RL-4B/` | [Anonymous access][models] |
+| Glasseeker-9B | RL-trained research model based on Qwen3.5-9B; folder `RL-9B/` | [Anonymous access][models] |
 | SFT dataset | 5,762 search trajectories covering 4,448 unique questions | [Anonymous access][datasets] |
 | RL dataset | 1,308 questions with reference answers | [Anonymous access][datasets] |
 
@@ -124,7 +124,7 @@ Available resources are linked below; additional links will be added as each art
 - [x] SFT and RL datasets with dataset card
 - [x] Data construction pipeline
 - [x] 4B and 9B SFT checkpoints with model card
-- [ ] RL checkpoints
+- [x] 4B and 9B RL checkpoints
 - [ ] SFT recipes and CM-GSPO training code
 - [x] Evaluation harness, backend tools, and anti-leakage guardrails
 - [ ] Installation, inference, training, and evaluation instructions
